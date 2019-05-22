@@ -8,7 +8,8 @@ namespace ConsoleApp8
     {
         public static void Main(string[] args)
         {
-            
+            Console.WriteLine(isPangram(s));
+            Console.WriteLine(isPangram(sb));
         }
 
         public static bool isPangram(string s)
@@ -16,13 +17,25 @@ namespace ConsoleApp8
             HashSet<char> hS = new HashSet<char>();
             foreach (char x in s)
             {
-                hS.Add(newClass sb, char x);
+                if(char.IsLetter(x))
+                {
+                    hS.Add(x);
+                    if(hS.Count == 26)
+                    {
+                        return true;
+                    }
+                    else if(hS.Count < 26)
+                    {
+                        return false;
+                    }
+                }          
             }
             return true;
         }
-        public static void newClass()
+
+        public static void CreateString()
         {
-            string sb = "";
+            string sb = new string();           
         }
     }
 }
